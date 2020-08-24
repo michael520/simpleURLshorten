@@ -12,7 +12,12 @@ Create with laravel framework
 
 ### Edit .env which mysql connection
 
+``cp .env.example .env``
 ``vim .env``
+
+### give a new app key
+
+``php artisan key:generate``
 
 ### do migration to install url shorten table
 
