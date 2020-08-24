@@ -12,7 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('generate-shorten-link', 'ShortenLinkController@index');
+
+Route::post('generate-shorten-link', 'ShortenLinkController@store')
+    ->name('generate.shorten.link.post');
+
+Route::get('{code}', 'ShortenLinkController@shortenLink')
+    ->name('shorten.link');
